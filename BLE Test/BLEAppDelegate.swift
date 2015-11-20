@@ -14,7 +14,9 @@ import WatchConnectivity
 class BLEAppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     
     var window:UIWindow?
-    var mainViewController:BLEMainViewController?
+    //var mainViewController:BLEMainViewController?
+    var mainViewController:CalendarViewController?
+    var calendarViewController:CalendarViewController?
     
     
     required override init() {
@@ -26,11 +28,13 @@ class BLEAppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        self.mainViewController = BLEMainViewController.sharedInstance
+        //self.mainViewController = BLEMainViewController.sharedInstance
+        self.mainViewController = CalendarViewController()
         
         window!.rootViewController = mainViewController
         window!.makeKeyAndVisible()
         
+        /*
         // Ask user for permision to show local notifications
         if(UIApplication.instancesRespondToSelector(Selector("registerUserNotificationSettings:")))
         {
@@ -62,7 +66,7 @@ class BLEAppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
                 print("WCSession is not reachable")
             }
         }
-        
+        */
         return true
         
     }
@@ -71,7 +75,7 @@ class BLEAppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     func applicationWillResignActive(application: UIApplication) {
         
         // Stop scanning before entering background
-        mainViewController?.stopScan()
+        //mainViewController?.stopScan()
         
         //TEST NOTIFICATION
 //        let note = UILocalNotification()
@@ -85,7 +89,7 @@ class BLEAppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     
     func applicationDidBecomeActive(application: UIApplication) {
         
-        mainViewController?.didBecomeActive()
+        //mainViewController?.didBecomeActive()
     }
     
     

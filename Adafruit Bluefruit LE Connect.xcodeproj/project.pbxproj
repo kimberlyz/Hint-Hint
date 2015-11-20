@@ -36,7 +36,9 @@
 		A9C61DEB1B6A961F005C3D9B /* MqttSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C61DEA1B6A961F005C3D9B /* MqttSettings.swift */; };
 		A9C61DED1B6AC782005C3D9B /* MqttSettingsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C61DEC1B6AC782005C3D9B /* MqttSettingsHeaderCell.swift */; };
 		A9C88E7A1B7E47ED00A3F330 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A9C88E791B7E47ED00A3F330 /* Settings.bundle */; };
-		D799733A6FE07F51B41A7F65 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F99478C57E5542A6C520337F /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D799733A6FE07F51B41A7F65 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F99478C57E5542A6C520337F /* Pods.framework */; };
+		DBD0F07F1BFED81E00A98E1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD0F07E1BFED81E00A98E1A /* Main.storyboard */; };
+		DBD0F0811BFED90D00A98E1A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0F0801BFED90D00A98E1A /* CalendarViewController.swift */; };
 		F007EDBA1A3064B60023FCD6 /* ControllerViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F007EDB91A3064B60023FCD6 /* ControllerViewController_iPad.xib */; };
 		F007EDC31A3191BC0023FCD6 /* ble-arrow_button_down.png in Resources */ = {isa = PBXBuildFile; fileRef = F007EDBB1A3191BC0023FCD6 /* ble-arrow_button_down.png */; };
 		F007EDC41A3191BC0023FCD6 /* ble-arrow_button_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F007EDBC1A3191BC0023FCD6 /* ble-arrow_button_down@2x.png */; };
@@ -245,6 +247,8 @@
 		A9C61DEC1B6AC782005C3D9B /* MqttSettingsHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MqttSettingsHeaderCell.swift; sourceTree = "<group>"; };
 		A9C88E791B7E47ED00A3F330 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		ADDE3DF62E9F32DA6CD326FB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DBD0F07E1BFED81E00A98E1A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "BLE Test/Main.storyboard"; sourceTree = "<group>"; };
+		DBD0F0801BFED90D00A98E1A /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		F007EDB91A3064B60023FCD6 /* ControllerViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ControllerViewController_iPad.xib; sourceTree = "<group>"; };
 		F007EDBB1A3191BC0023FCD6 /* ble-arrow_button_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ble-arrow_button_down.png"; sourceTree = "<group>"; };
 		F007EDBC1A3191BC0023FCD6 /* ble-arrow_button_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ble-arrow_button_down@2x.png"; sourceTree = "<group>"; };
@@ -567,6 +571,8 @@
 				A9C88E791B7E47ED00A3F330 /* Settings.bundle */,
 				F08F81111B0BF3FD000F3A87 /* BluetoothLE Test.entitlements */,
 				F05E7E0218BEF399005E25F6 /* Images.xcassets */,
+				DBD0F07E1BFED81E00A98E1A /* Main.storyboard */,
+				DBD0F0801BFED90D00A98E1A /* CalendarViewController.swift */,
 				F0A2C96F16BBE44500F2FD12 /* Classes */,
 				F0C47BFD16C229CE002EFADA /* Images */,
 				F0CBE3521B28C308009E0128 /* BluetoothLE Test WatchKit Extension */,
@@ -928,6 +934,7 @@
 				F007EDC81A3191BC0023FCD6 /* ble-arrow_button_right@2x.png in Resources */,
 				F007EDEF1A31A2350023FCD6 /* ble-button_pad_exit@2x.png in Resources */,
 				F0A93B721B40D8C900BDBB85 /* clearPixel.png in Resources */,
+				DBD0F07F1BFED81E00A98E1A /* Main.storyboard in Resources */,
 				F0C7709419FF8D25005391F6 /* signalStrength-0.png in Resources */,
 				F0D4AFBA1A32505300E9063E /* SensorValueCell.xib in Resources */,
 				F007EDE81A3196090023FCD6 /* ble-button_numbers-rotated-2.png in Resources */,
@@ -1064,6 +1071,7 @@
 				F0F889A91A009B81008AA257 /* BLEInfo.swift in Sources */,
 				F0F889AB1A00BD55008AA257 /* BLEPeripheral.swift in Sources */,
 				F03A23661AF9CE8900075364 /* UpdateDialogViewController.m in Sources */,
+				DBD0F0811BFED90D00A98E1A /* CalendarViewController.swift in Sources */,
 				F03A23831AF9CF1F00075364 /* ReleasesParser.m in Sources */,
 				F0718E0019EE77F4002B5ABB /* DeviceListViewController.swift in Sources */,
 				F0BCF06619EBB881006086C6 /* BLEMainViewController.swift in Sources */,
