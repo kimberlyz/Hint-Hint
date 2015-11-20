@@ -28,10 +28,26 @@ class BLEAppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        //self.mainViewController = BLEMainViewController.sharedInstance
-        self.mainViewController = CalendarViewController()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("CalendarStoryboard")
+        self.window!.rootViewController = vc
+        //print(self.window!.rootViewController!)
+        //self.window!.rootViewController!.presentViewController(vc, animated: true, completion: nil)
         
-        window!.rootViewController = mainViewController
+        //mainViewController = CalendarViewController()
+        //self.window?.addSubview(mainViewController!.view)
+        
+        //self.window?.rootViewController?.presentViewController(mainViewController!, animated: false, completion: nil)
+        
+        //  Temporary iOS8 fix for 'presentation lag' on launch
+        //[self.window addSubview:viewController.view];
+        
+        //[self.window.rootViewController presentViewController:viewController animated:NO completion:nil];
+        
+        //self.mainViewController = BLEMainViewController.sharedInstance
+        //self.mainViewController = CalendarViewController()
+        
+        //window!.rootViewController = mainViewController
         window!.makeKeyAndVisible()
         
         /*

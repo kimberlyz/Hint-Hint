@@ -30,6 +30,7 @@ class CalendarViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         self.calendarView.commitCalendarViewUpdate()
+        print(self.calendarView.delegate)
         self.menuView.commitMenuViewUpdate()
     }
 
@@ -55,5 +56,17 @@ extension CalendarViewController: CVCalendarViewDelegate, CVCalendarMenuViewDele
     /// Required method to implement!
     func firstWeekday() -> Weekday {
         return .Sunday
+    }
+}
+
+// MARK: - CVCalendarViewAppearanceDelegate
+
+extension CalendarViewController: CVCalendarViewAppearanceDelegate {
+    func dayLabelPresentWeekdayInitallyBold() -> Bool {
+        return false
+    }
+    
+    func spaceBetweenDayViews() -> CGFloat {
+        return 2
     }
 }
