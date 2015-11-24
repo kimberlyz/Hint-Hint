@@ -15,8 +15,8 @@ class BLEAppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     
     var window:UIWindow?
     //var mainViewController:BLEMainViewController?
-    var mainViewController:CalendarViewController?
-    var calendarViewController:CalendarViewController?
+    var mainViewController:MainViewController?
+    var calendarViewController:MainViewController?
     
     
     required override init() {
@@ -50,7 +50,7 @@ class BLEAppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         //window!.rootViewController = mainViewController
         window!.makeKeyAndVisible()
         
-        /*
+        
         // Ask user for permision to show local notifications
         if(UIApplication.instancesRespondToSelector(Selector("registerUserNotificationSettings:")))
         {
@@ -82,7 +82,7 @@ class BLEAppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
                 print("WCSession is not reachable")
             }
         }
-        */
+        
         return true
         
     }

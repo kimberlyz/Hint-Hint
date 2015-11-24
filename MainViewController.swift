@@ -9,10 +9,11 @@
 import UIKit
 import CVCalendar
 
-class CalendarViewController: UIViewController {
+class MainViewController: UIViewController {
 
     @IBOutlet weak var menuView: CVCalendarMenuView!
     @IBOutlet weak var calendarView: CVCalendarView!
+    @IBOutlet weak var monthLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -46,7 +47,7 @@ class CalendarViewController: UIViewController {
 
 }
 
-extension CalendarViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
+extension MainViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
     
     /// Required method to implement!
     func presentationMode() -> CalendarMode {
@@ -61,7 +62,7 @@ extension CalendarViewController: CVCalendarViewDelegate, CVCalendarMenuViewDele
 
 // MARK: - CVCalendarViewAppearanceDelegate
 
-extension CalendarViewController: CVCalendarViewAppearanceDelegate {
+extension MainViewController: CVCalendarViewAppearanceDelegate {
     func dayLabelPresentWeekdayInitallyBold() -> Bool {
         return false
     }
