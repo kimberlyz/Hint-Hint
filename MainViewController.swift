@@ -38,6 +38,12 @@ class MainViewController: UIViewController {
         self.calendarView.commitCalendarViewUpdate()
         self.menuView.commitMenuViewUpdate()
     }
+    
+    @IBAction func connect(sender: AnyObject) {
+        let vc = BLEMainViewController()
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
+    
    }
 
 extension MainViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
