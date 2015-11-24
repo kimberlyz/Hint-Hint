@@ -52,7 +52,7 @@ class UARTViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
     private var keyboardIsShown:Bool = false
     private var consoleAsciiText:NSAttributedString? = NSAttributedString(string: "")
     private var consoleHexText: NSAttributedString? = NSAttributedString(string: "")
-    private let backgroundQueue : dispatch_queue_t = dispatch_queue_create("com.adafruit.bluefruitconnect.bgqueue", nil)
+    private let backgroundQueue : dispatch_queue_t = dispatch_queue_create("com.adafruit.bluefruitconnect.hint-hint.bgqueue", nil)
     private var lastScroll:CFTimeInterval = 0.0
     private let scrollIntvl:CFTimeInterval = 1.0
     private var lastScrolledLength = 0

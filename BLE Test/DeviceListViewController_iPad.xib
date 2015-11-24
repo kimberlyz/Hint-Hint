@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -20,6 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAc-LH-ENU" userLabel="Text View - Debug">
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <color key="textColor" red="0.0" green="1" blue="0.36645961719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -27,6 +28,7 @@
                 </textView>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAl-Fo-41P">
                     <rect key="frame" x="536" y="20" width="73" height="30"/>
+                    <animations/>
                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="DEBUG!">
@@ -36,6 +38,7 @@
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="grouped" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="50" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="nGu-Ja-9Pd" userLabel="tableView">
                     <rect key="frame" x="159" y="20" width="450" height="996"/>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="450" id="LdP-Qc-0Tu"/>
@@ -48,6 +51,7 @@
                     </connections>
                 </tableView>
             </subviews>
+            <animations/>
             <constraints>
                 <constraint firstItem="nGu-Ja-9Pd" firstAttribute="top" secondItem="lXq-L0-EMh" secondAttribute="top" constant="20" id="5II-gH-s8V"/>
                 <constraint firstAttribute="bottom" secondItem="nGu-Ja-9Pd" secondAttribute="bottom" constant="8" id="BKj-vh-SaP"/>
@@ -67,17 +71,19 @@
             <rect key="frame" x="0.0" y="0.0" width="299" height="48"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lFr-VI-7u2" id="zFI-Av-r6X">
-                <rect key="frame" x="0.0" y="0.0" width="299" height="147"/>
+                <rect key="frame" x="0.0" y="0.0" width="299" height="47"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="100" contentMode="left" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKR-WO-s1g" userLabel="nameLabel">
                         <rect key="frame" x="42" y="7" width="181" height="24"/>
+                        <animations/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypm-OW-SDf" userLabel="rssiLabel">
                         <rect key="frame" x="8" y="28" width="26" height="18"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="BdU-UU-RTr"/>
                             <constraint firstAttribute="width" constant="26" id="JXU-H8-pBo"/>
@@ -88,6 +94,7 @@
                     </label>
                     <imageView userInteractionEnabled="NO" tag="104" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signalStrength-0.png" translatesAutoresizingMaskIntoConstraints="NO" id="vLb-72-5Pt">
                         <rect key="frame" x="8" y="8" width="24" height="21"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="JhV-wa-tPe"/>
                             <constraint firstAttribute="width" constant="24" id="ZpO-IT-t2e"/>
@@ -95,6 +102,7 @@
                     </imageView>
                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="105" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UART capable" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="qiG-79-VUd" userLabel="uartCapableLabel">
                         <rect key="frame" x="42" y="27" width="249" height="21"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="eWP-l7-F2f"/>
                         </constraints>
@@ -104,6 +112,7 @@
                     </label>
                     <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iR9-Tx-BoW" userLabel="toggleButton">
                         <rect key="frame" x="0.0" y="1" width="223" height="46"/>
+                        <animations/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <state key="normal">
                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -115,6 +124,7 @@
                     </button>
                     <button opaque="NO" tag="102" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEJ-ws-lrh" userLabel="connectButton">
                         <rect key="frame" x="223" y="9" width="68" height="28"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="68" id="4xf-lh-s41"/>
                         </constraints>
@@ -124,6 +134,7 @@
                         </state>
                     </button>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="tEJ-ws-lrh" firstAttribute="leading" secondItem="iR9-Tx-BoW" secondAttribute="trailing" id="0Sl-u3-fzd"/>
                     <constraint firstItem="ypm-OW-SDf" firstAttribute="leading" secondItem="zFI-Av-r6X" secondAttribute="leadingMargin" id="6JW-7C-eni"/>
@@ -143,6 +154,7 @@
                     <constraint firstItem="qiG-79-VUd" firstAttribute="top" secondItem="zFI-Av-r6X" secondAttribute="topMargin" constant="19" id="yxX-lg-cIk"/>
                 </constraints>
             </tableViewCellContentView>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="-271.5" y="-438"/>
         </tableViewCell>
@@ -150,22 +162,25 @@
             <rect key="frame" x="0.0" y="0.0" width="299" height="22"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dFu-6m-DST" id="gq9-3L-79S">
-                <rect key="frame" x="0.0" y="0.0" width="299" height="147"/>
+                <rect key="frame" x="0.0" y="0.0" width="299" height="21"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="100" contentMode="left" text="Attribute" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qah-Kw-AhP" userLabel="nameLabel">
                         <rect key="frame" x="8" y="4" width="283" height="15"/>
+                        <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </label>
                     <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1A-4r-dDY" userLabel="cellButton">
                         <rect key="frame" x="0.0" y="0.0" width="299" height="15"/>
+                        <animations/>
                         <state key="normal">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="G1A-4r-dDY" firstAttribute="leading" secondItem="gq9-3L-79S" secondAttribute="leading" id="Kdj-tI-Pt4"/>
                     <constraint firstAttribute="trailing" secondItem="G1A-4r-dDY" secondAttribute="trailing" id="Lg6-nT-Y6D"/>
@@ -176,6 +191,7 @@
                     <constraint firstItem="qah-Kw-AhP" firstAttribute="trailing" secondItem="gq9-3L-79S" secondAttribute="trailingMargin" id="wUT-hJ-Fcj"/>
                 </constraints>
             </tableViewCellContentView>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <point key="canvasLocation" x="-271.5" y="-531"/>
@@ -186,6 +202,7 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="center" image="adafruit_logo2012-white-horiz-230w.png" translatesAutoresizingMaskIntoConstraints="NO" id="tZe-w6-8xo">
                     <rect key="frame" x="20" y="12" width="260" height="100"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="Rvv-vh-TKM"/>
                         <constraint firstAttribute="width" constant="260" id="uF7-zX-2bs"/>
@@ -193,6 +210,7 @@
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bluefruit LE Connect" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwo-h9-giM">
                     <rect key="frame" x="100" y="114" width="200" height="30"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="Cmp-Lm-Ax2"/>
                         <constraint firstAttribute="height" constant="30" id="qkn-KQ-3YA"/>
@@ -205,6 +223,7 @@
                 </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" indicatorStyle="white" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3dw-Sa-oee">
                     <rect key="frame" x="20" y="172" width="280" height="806"/>
+                    <animations/>
                     <attributedString key="attributedText">
                         <fragment>
                             <string key="content">• A detailed guide to using this app can be found here:
@@ -303,6 +322,7 @@ https://learn.adafruit.com/getting-started-with-the-nrf8001-bluefruit-le-breakou
                 </textView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="v1.1.1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUH-7k-6Fw">
                     <rect key="frame" x="100" y="134" width="200" height="30"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="4Li-5K-HLx"/>
                         <constraint firstAttribute="width" constant="200" id="BQe-vR-rPZ"/>
@@ -314,6 +334,7 @@ https://learn.adafruit.com/getting-started-with-the-nrf8001-bluefruit-le-breakou
                     <size key="shadowOffset" width="0.0" height="0.0"/>
                 </label>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="3dw-Sa-oee" firstAttribute="top" secondItem="lUH-7k-6Fw" secondAttribute="bottom" constant="8" id="5Hn-F9-svY"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -21,6 +21,7 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="grouped" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="50" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="q4d-iJ-RdI" userLabel="Device List Table">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="44"/>
                     <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -30,6 +31,7 @@
                     </connections>
                 </tableView>
             </subviews>
+            <animations/>
             <constraints>
                 <constraint firstItem="q4d-iJ-RdI" firstAttribute="top" secondItem="4pg-hr-bCM" secondAttribute="top" id="MtV-np-Kyw"/>
                 <constraint firstAttribute="trailing" secondItem="q4d-iJ-RdI" secondAttribute="trailing" id="O6m-nc-H2v"/>
@@ -56,6 +58,7 @@
             <subviews>
                 <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26M-PO-aGQ">
                     <rect key="frame" x="0.0" y="22" width="375" height="44"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="WdV-ET-gi6"/>
                     </constraints>
@@ -71,6 +74,7 @@
                 </navigationBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYa-lV-rnc" userLabel="PlaceholderView">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="22"/>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="22" id="jiz-bt-akC"/>
@@ -78,6 +82,7 @@
                 </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" indicatorStyle="white" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cSI-jn-4wf">
                     <rect key="frame" x="28" y="219" width="319" height="717"/>
+                    <animations/>
                     <attributedString key="attributedText">
                         <fragment>
                             <string key="content">• A detailed guide to using this app can be found here:
@@ -179,6 +184,7 @@ https://learn.adafruit.com/getting-started-with-the-nrf8001-bluefruit-le-breakou
                     <subviews>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Bluefruit LE Connect" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWV-QO-Dca">
                             <rect key="frame" x="63" y="101" width="180" height="30"/>
+                            <animations/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -186,6 +192,7 @@ https://learn.adafruit.com/getting-started-with-the-nrf8001-bluefruit-le-breakou
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="v.1.1.1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdQ-bI-A6d" userLabel="versionLabel">
                             <rect key="frame" x="63" y="120" width="180" height="30"/>
+                            <animations/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -193,8 +200,10 @@ https://learn.adafruit.com/getting-started-with-the-nrf8001-bluefruit-le-breakou
                         </label>
                         <imageView userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="center" fixedFrame="YES" image="adafruit_logo2012-white-horiz-230w.png" translatesAutoresizingMaskIntoConstraints="NO" id="sjl-vt-gdR">
                             <rect key="frame" x="-17" y="8" width="260" height="100"/>
+                            <animations/>
                         </imageView>
                     </subviews>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="145" id="1BS-IJ-Gph"/>
@@ -202,6 +211,7 @@ https://learn.adafruit.com/getting-started-with-the-nrf8001-bluefruit-le-breakou
                     </constraints>
                 </view>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="0.14999999999999999" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="cSI-jn-4wf" firstAttribute="leading" secondItem="XTO-Cj-gaH" secondAttribute="leading" constant="28" id="8kf-96-VsJ"/>
@@ -225,17 +235,19 @@ https://learn.adafruit.com/getting-started-with-the-nrf8001-bluefruit-le-breakou
             <rect key="frame" x="0.0" y="0.0" width="299" height="48"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9hq-Hj-3DE" id="qHX-Dw-Jr8">
-                <rect key="frame" x="0.0" y="0.0" width="299" height="147"/>
+                <rect key="frame" x="0.0" y="0.0" width="299" height="47"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="100" contentMode="left" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC8-BS-Yeq" userLabel="nameLabel">
                         <rect key="frame" x="42" y="7" width="181" height="24"/>
+                        <animations/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4W0-Ly-bcW" userLabel="rssiLabel">
                         <rect key="frame" x="8" y="28" width="26" height="18"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="Ev0-OH-zql"/>
                             <constraint firstAttribute="width" constant="26" id="VhY-Sw-i1N"/>
@@ -246,6 +258,7 @@ https://learn.adafruit.com/getting-started-with-the-nrf8001-bluefruit-le-breakou
                     </label>
                     <imageView userInteractionEnabled="NO" tag="104" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signalStrength-0.png" translatesAutoresizingMaskIntoConstraints="NO" id="xxO-YE-opn">
                         <rect key="frame" x="8" y="8" width="24" height="21"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="24" id="vcM-4n-PXG"/>
                             <constraint firstAttribute="height" constant="21" id="xmX-fw-ESb"/>
@@ -253,6 +266,7 @@ https://learn.adafruit.com/getting-started-with-the-nrf8001-bluefruit-le-breakou
                     </imageView>
                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="105" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UART capable" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Yse-6t-Bpc" userLabel="uartCapableLabel">
                         <rect key="frame" x="42" y="27" width="249" height="21"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Efq-7E-6XE"/>
                         </constraints>
@@ -262,6 +276,7 @@ https://learn.adafruit.com/getting-started-with-the-nrf8001-bluefruit-le-breakou
                     </label>
                     <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lcx-1A-9x9" userLabel="toggleButton">
                         <rect key="frame" x="0.0" y="1" width="223" height="46"/>
+                        <animations/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <state key="normal">
                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -273,6 +288,7 @@ https://learn.adafruit.com/getting-started-with-the-nrf8001-bluefruit-le-breakou
                     </button>
                     <button opaque="NO" tag="102" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLX-6Q-sPY" userLabel="connectButton">
                         <rect key="frame" x="223" y="9" width="68" height="28"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="68" id="7Dw-N8-IXt"/>
                         </constraints>
@@ -282,6 +298,7 @@ https://learn.adafruit.com/getting-started-with-the-nrf8001-bluefruit-le-breakou
                         </state>
                     </button>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstAttribute="centerY" secondItem="HC8-BS-Yeq" secondAttribute="centerY" constant="4" id="0Wp-6J-rkg"/>
                     <constraint firstItem="oLX-6Q-sPY" firstAttribute="trailing" secondItem="qHX-Dw-Jr8" secondAttribute="trailingMargin" id="2Ev-pO-FkX"/>
@@ -301,6 +318,7 @@ https://learn.adafruit.com/getting-started-with-the-nrf8001-bluefruit-le-breakou
                     <constraint firstItem="Lcx-1A-9x9" firstAttribute="top" secondItem="qHX-Dw-Jr8" secondAttribute="top" constant="1" id="x8m-Vc-nFf"/>
                 </constraints>
             </tableViewCellContentView>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="-271.5" y="-438"/>
         </tableViewCell>
@@ -308,22 +326,25 @@ https://learn.adafruit.com/getting-started-with-the-nrf8001-bluefruit-le-breakou
             <rect key="frame" x="0.0" y="0.0" width="299" height="22"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JkO-yz-rpB" id="0bF-Ap-o4e">
-                <rect key="frame" x="0.0" y="0.0" width="299" height="147"/>
+                <rect key="frame" x="0.0" y="0.0" width="299" height="21"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="100" contentMode="left" text="Attribute" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGT-Jw-Z8k" userLabel="Label - Name">
                         <rect key="frame" x="8" y="4" width="283" height="15"/>
+                        <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </label>
                     <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skg-eV-n9d" userLabel="cellButton">
                         <rect key="frame" x="0.0" y="0.0" width="299" height="15"/>
+                        <animations/>
                         <state key="normal">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstAttribute="centerY" secondItem="AGT-Jw-Z8k" secondAttribute="centerY" constant="-1" id="Hwm-3f-GeV"/>
                     <constraint firstItem="skg-eV-n9d" firstAttribute="leading" secondItem="0bF-Ap-o4e" secondAttribute="leading" id="K5O-qp-hNs"/>
@@ -334,6 +355,7 @@ https://learn.adafruit.com/getting-started-with-the-nrf8001-bluefruit-le-breakou
                     <constraint firstItem="skg-eV-n9d" firstAttribute="top" secondItem="0bF-Ap-o4e" secondAttribute="top" id="wAf-ko-Wvx"/>
                 </constraints>
             </tableViewCellContentView>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <point key="canvasLocation" x="-271.5" y="-354"/>
@@ -341,6 +363,7 @@ https://learn.adafruit.com/getting-started-with-the-nrf8001-bluefruit-le-breakou
         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" usesAttributedText="YES" id="EXG-N6-FDF">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <animations/>
             <attributedString key="attributedText">
                 <fragment content="• Connect ">
                     <attributes>
@@ -439,9 +462,4 @@ http://www.adafruit.com/bluefruitle
         <image name="adafruit_logo2012-white-horiz-230w.png" width="230" height="93"/>
         <image name="signalStrength-0.png" width="24" height="21"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

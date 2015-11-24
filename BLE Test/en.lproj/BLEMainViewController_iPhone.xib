@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BLEMainViewController" customModule="BluetoothLE_Test" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BLEMainViewController" customModule="Adafruit_Bluefruit_LE_Connect" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="laf-GT-s8u" id="kbl-iz-BcI"/>
                 <outlet property="helpViewController" destination="yll-D2-uUX" id="5pB-Ku-Uve"/>
                 <outlet property="infoButton" destination="8iu-Sf-oGZ" id="Cyn-C7-PMx"/>
                 <outlet property="view" destination="1xm-FQ-qRq" id="CQl-yS-mFQ"/>
@@ -19,6 +21,7 @@
             <subviews>
                 <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.39999999999999963" contentMode="center" image="Adaflower.png" translatesAutoresizingMaskIntoConstraints="NO" id="69">
                     <rect key="frame" x="109" y="356" width="102" height="102"/>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="102" id="7PY-N5-f9B"/>
@@ -27,15 +30,17 @@
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bluetooth disabled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzt-wf-e8c" userLabel="warningLabel">
                     <rect key="frame" x="8" y="157" width="304" height="21"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="YES-NE-f13"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="0.14999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+            <animations/>
+            <color key="backgroundColor" red="0.20620208379999999" green="0.64020415990000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="Hzt-wf-e8c" firstAttribute="leading" secondItem="1xm-FQ-qRq" secondAttribute="leading" constant="8" id="4bd-so-eOR"/>
                 <constraint firstAttribute="bottom" secondItem="69" secondAttribute="bottom" constant="110" id="TZJ-c0-EVG"/>
@@ -47,7 +52,7 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="526" y="457"/>
         </view>
-        <customObject id="yll-D2-uUX" customClass="HelpViewController" customModule="BluetoothLE_Test" customModuleProvider="target">
+        <customObject id="yll-D2-uUX" customClass="HelpViewController" customModule="Adafruit_Bluefruit_LE_Connect" customModuleProvider="target">
             <connections>
                 <outlet property="delegate" destination="-1" id="Mhi-YO-pYL"/>
                 <outlet property="view" destination="9SH-n8-oQ9" id="S0W-j2-eDH"/>
@@ -59,6 +64,7 @@
             <subviews>
                 <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIA-TE-amJ">
                     <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                    <animations/>
                     <items>
                         <navigationItem title="Help" id="aEb-7T-mER" userLabel="Navigation Item - Done">
                             <barButtonItem key="leftBarButtonItem" title="Done" id="j0y-S3-7Re">
@@ -71,6 +77,7 @@
                 </navigationBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sly-h6-TY9" userLabel="statusPlaceHolder">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="22"/>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="22" id="3L6-qd-si6"/>
@@ -81,22 +88,26 @@
                     <subviews>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Bluefruit LE Connect" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCb-tV-ZJ7">
                             <rect key="frame" x="81" y="101" width="180" height="30"/>
+                            <animations/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="v.1.1.1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhj-d5-gEv">
                             <rect key="frame" x="81" y="120" width="180" height="30"/>
+                            <animations/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
                         <imageView userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="center" fixedFrame="YES" image="adafruit_logo2012-white-horiz-230w.png" translatesAutoresizingMaskIntoConstraints="NO" id="jFm-Sg-7Qj">
                             <rect key="frame" x="1" y="8" width="260" height="100"/>
+                            <animations/>
                         </imageView>
                     </subviews>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="145" id="Gss-Jt-6sh"/>
@@ -105,6 +116,7 @@
                 </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Cg-B2-X07">
                     <rect key="frame" x="20" y="213" width="280" height="247"/>
+                    <animations/>
                     <attributedString key="attributedText">
                         <fragment content="• Connect ">
                             <attributes>
@@ -199,6 +211,7 @@ http://www.adafruit.com/bluefruitle
                     <dataDetectorType key="dataDetectorTypes" link="YES"/>
                 </textView>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="0.14999999999999999" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="1Xu-sB-khT" secondAttribute="centerX" id="1va-8z-WlO"/>
@@ -221,6 +234,7 @@ http://www.adafruit.com/bluefruitle
         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="8iu-Sf-oGZ" userLabel="Button - Info">
             <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <animations/>
             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
             <state key="normal">
                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -229,14 +243,19 @@ http://www.adafruit.com/bluefruitle
                 <action selector="showInfo:" destination="-1" eventType="touchUpInside" id="PLY-er-wLK"/>
             </connections>
         </button>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="laf-GT-s8u">
+            <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <animations/>
+            <state key="normal" title="Back"/>
+            <connections>
+                <action selector="back:" destination="-1" eventType="touchUpInside" id="Fas-Uu-gzD"/>
+            </connections>
+            <point key="canvasLocation" x="286" y="478"/>
+        </button>
     </objects>
     <resources>
         <image name="Adaflower.png" width="86" height="86"/>
         <image name="adafruit_logo2012-white-horiz-230w.png" width="230" height="93"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

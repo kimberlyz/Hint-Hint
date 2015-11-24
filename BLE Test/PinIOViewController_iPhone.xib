@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PinIOViewController" customModule="Adafruit_Bluefruit_LE_Connect" customModuleProvider="target">
@@ -17,6 +18,7 @@
         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Header Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xpr-sU-Fpw">
             <rect key="frame" x="0.0" y="0.0" width="150" height="36"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <animations/>
             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <nil key="highlightedColor"/>
@@ -31,16 +33,18 @@
                 <subviews>
                     <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="100" contentMode="left" text="Pin 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWh-vo-RI6" userLabel="Label - Pin">
                         <rect key="frame" x="14" y="6" width="56" height="22"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="jdz-ZS-jHj"/>
                             <constraint firstAttribute="width" constant="56" id="tTu-GS-MWp"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </label>
                     <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="101" contentMode="left" text="Input" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ce2-Wt-Gy4" userLabel="Label - Mode">
                         <rect key="frame" x="14" y="27" width="56" height="18"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="56" id="RJR-FQ-yeX"/>
                             <constraint firstAttribute="height" constant="18" id="a2r-NB-9be"/>
@@ -51,6 +55,7 @@
                     </label>
                     <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" text="Low" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKq-by-hdS" userLabel="Label - Value">
                         <rect key="frame" x="235" y="7" width="64" height="30"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="ERr-Ho-x74"/>
                             <constraint firstAttribute="width" constant="64" id="yUT-ct-m5n"/>
@@ -61,6 +66,7 @@
                     </label>
                     <segmentedControl opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="h4a-NC-uK2" userLabel="Segmented Control - Mode">
                         <rect key="frame" x="14" y="55" width="271" height="29"/>
+                        <animations/>
                         <segments>
                             <segment title="Input"/>
                             <segment title="Output"/>
@@ -68,6 +74,7 @@
                     </segmentedControl>
                     <segmentedControl opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SSc-4q-1dh" userLabel="Segmented Control - Value">
                         <rect key="frame" x="14" y="105" width="271" height="29"/>
+                        <animations/>
                         <segments>
                             <segment title="Low"/>
                             <segment title="High"/>
@@ -75,6 +82,7 @@
                     </segmentedControl>
                     <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32q-x8-O5J" userLabel="Button - Toggle Cell">
                         <rect key="frame" x="0.0" y="0.0" width="299" height="44"/>
+                        <animations/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <state key="normal">
                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -86,11 +94,13 @@
                     </button>
                     <slider hidden="YES" opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="H4v-zF-Vme" userLabel="Slider - Value">
                         <rect key="frame" x="11" y="109" width="276" height="31"/>
+                        <animations/>
                         <color key="minimumTrackTintColor" red="0.09803922474" green="0.58039218189999997" blue="0.98039221759999995" alpha="1" colorSpace="deviceRGB"/>
                         <color key="maximumTrackTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="thumbTintColor" red="0.09803922474" green="0.58039218189999997" blue="0.98039221759999995" alpha="1" colorSpace="deviceRGB"/>
                     </slider>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="h4a-NC-uK2" firstAttribute="leading" secondItem="Z01-ee-0B7" secondAttribute="leading" constant="14" id="0Sh-AM-Faz"/>
                     <constraint firstItem="32q-x8-O5J" firstAttribute="top" secondItem="Z01-ee-0B7" secondAttribute="top" id="6rT-xF-Qwy"/>
@@ -115,6 +125,7 @@
                     <constraint firstItem="h4a-NC-uK2" firstAttribute="top" secondItem="Ce2-Wt-Gy4" secondAttribute="bottom" constant="10" id="yxS-kN-ZG2"/>
                 </constraints>
             </tableViewCellContentView>
+            <animations/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
         </tableViewCell>
         <view contentMode="scaleToFill" id="4pg-hr-bCM">
@@ -123,6 +134,7 @@
             <subviews>
                 <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="grouped" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="50" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="q4d-iJ-RdI" userLabel="Pin I/O View">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="44"/>
                     <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -132,6 +144,7 @@
                     </connections>
                 </tableView>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="0.14999999999999999" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="q4d-iJ-RdI" firstAttribute="top" secondItem="4pg-hr-bCM" secondAttribute="top" id="MtV-np-Kyw"/>
@@ -155,6 +168,7 @@
             <subviews>
                 <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26M-PO-aGQ">
                     <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="WdV-ET-gi6"/>
                     </constraints>
@@ -170,6 +184,7 @@
                 </navigationBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYa-lV-rnc" userLabel="placeholderView">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="22"/>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="22" id="jiz-bt-akC"/>
@@ -177,6 +192,7 @@
                 </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" indicatorStyle="white" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cSI-jn-4wf">
                     <rect key="frame" x="20" y="86" width="280" height="520"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="280" id="Nep-Fp-YUg"/>
                     </constraints>
@@ -184,25 +200,10 @@
                         <fragment>
                             <string key="content">Instructions:
 
-</string>
-                            <attributes>
-                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <font key="NSFont" size="15" name="HelveticaNeue"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                            </attributes>
-                        </fragment>
-                        <fragment>
-                            <string key="content">• The Pin I/O mode uses works with an Arduino Uno running the BLEFirmata sketch.  Detailed instructions can be found here:
+• The Pin I/O mode uses works with an Arduino Uno running the BLEFirmata sketch.  Detailed instructions can be found here:
 https://learn.adafruit.com/bluefruit-le-connect-for-ios/pin-i-slash-o
 
-</string>
-                            <attributes>
-                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <font key="NSFont" size="15" name="HelveticaNeue"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                            </attributes>
-                        </fragment>
-                        <fragment content="• Tap a row in the table corresponding to the ">
+• Tap a row in the table corresponding to the </string>
                             <attributes>
                                 <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <font key="NSFont" size="15" name="HelveticaNeue"/>
@@ -330,6 +331,7 @@ https://learn.adafruit.com/bluefruit-le-connect-for-ios/pin-i-slash-o
                     <dataDetectorType key="dataDetectorTypes" link="YES"/>
                 </textView>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="0.14999999999999999" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="26M-PO-aGQ" secondAttribute="trailing" id="BZ6-b3-2Ik"/>
@@ -347,9 +349,4 @@ https://learn.adafruit.com/bluefruit-le-connect-for-ios/pin-i-slash-o
             <nil key="simulatedStatusBarMetrics"/>
         </view>
     </objects>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

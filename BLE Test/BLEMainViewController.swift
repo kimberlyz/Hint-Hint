@@ -47,6 +47,7 @@ class BLEMainViewController : UIViewController, UINavigationControllerDelegate, 
     
     @IBOutlet var infoButton:UIButton!
     @IBOutlet var warningLabel:UILabel!
+    @IBOutlet var backButton: UIButton!
     
     @IBOutlet var helpViewController:HelpViewController!
     
@@ -55,10 +56,12 @@ class BLEMainViewController : UIViewController, UINavigationControllerDelegate, 
     private var currentPeripheral:BLEPeripheral?
     private var dfuPeripheral:CBPeripheral?
     private var infoBarButton:UIBarButtonItem?
+    // trying to add backBarButton with same format as infoButton/infoBarButton
+    private var backBarButton:UIBarButtonItem?
     private var scanIndicator:UIActivityIndicatorView?
     private var scanIndicatorItem:UIBarButtonItem?
     private var scanButtonItem:UIBarButtonItem?
-    private let cbcmQueue = dispatch_queue_create("com.adafruit.bluefruitconnect.cbcmqueue", DISPATCH_QUEUE_CONCURRENT)
+    private let cbcmQueue = dispatch_queue_create("com.adafruit.bluefruitconnect.hint-hint.cbcmqueue", DISPATCH_QUEUE_CONCURRENT)
     private let connectionTimeOutIntvl:NSTimeInterval = 30.0
     private var connectionTimer:NSTimer?
     
@@ -213,19 +216,30 @@ class BLEMainViewController : UIViewController, UINavigationControllerDelegate, 
     func createDeviceListViewController(){
         
         //add info bar button to mode controllers
+        /*
         let archivedData = NSKeyedArchiver.archivedDataWithRootObject(infoButton)
         let buttonCopy = NSKeyedUnarchiver.unarchiveObjectWithData(archivedData) as! UIButton
         buttonCopy.addTarget(self, action: Selector("showInfo:"), forControlEvents: UIControlEvents.TouchUpInside)
-        infoBarButton = UIBarButtonItem(customView: buttonCopy)
+        infoBarButton = UIBarButtonItem(customView: buttonCopy) */
+        
+        // add back bar button to mode controllers
+        let archivedData = NSKeyedArchiver.archivedDataWithRootObject(backButton)
+        let buttonCopy = NSKeyedUnarchiver.unarchiveObjectWithData(archivedData) as! UIButton
+        buttonCopy.addTarget(self, action: Selector("back:"), forControlEvents: UIControlEvents.TouchUpInside)
+        backBarButton = UIBarButtonItem(customView: buttonCopy)
+        
         deviceListViewController = DeviceListViewController(aDelegate: self)
         deviceListViewController.navigationItem.rightBarButtonItem = infoBarButton
+        
+        deviceListViewController.navigationItem.leftBarButtonItem = backBarButton
+        
         deviceListViewController.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Disconnect", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         //add scan indicator to toolbar
         scanIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
         scanIndicator!.hidesWhenStopped = false
         scanIndicatorItem = UIBarButtonItem(customView: scanIndicator!)
         let space = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-        scanButtonItem = UIBarButtonItem(title: "Scan for peripherals", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("toggleScan:"))
+        scanButtonItem = UIBarButtonItem(title: "Scan", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("toggleScan:"))
         deviceListViewController.toolbarItems = [space, scanButtonItem!, space]
         
     }
@@ -340,6 +354,11 @@ class BLEMainViewController : UIViewController, UINavigationControllerDelegate, 
         
         return hvc
         
+    }
+    
+    
+    @IBAction func back(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     
@@ -913,6 +932,7 @@ class BLEMainViewController : UIViewController, UINavigationControllerDelegate, 
         
         if (vc != nil) {
             vc?.navigationItem.rightBarButtonItem = infoBarButton
+            vc?.navigationItem.leftBarButtonItem = backBarButton
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.pushViewController(vc!)
             })
