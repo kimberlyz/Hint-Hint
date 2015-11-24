@@ -16,7 +16,7 @@ protocol MainViewControllerDelegate : Any {
 }
 
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, MainViewControllerDelegate {
 
     @IBOutlet weak var menuView: CVCalendarMenuView!
     @IBOutlet weak var calendarView: CVCalendarView!
@@ -43,6 +43,7 @@ class MainViewController: UIViewController {
     
     
     
+    private var connectionTimer:NSTimer?
     private let cbcmQueue = dispatch_queue_create("com.adafruit.bluefruitconnect.cbcmqueue", DISPATCH_QUEUE_CONCURRENT)
     private var currentPeripheral:BLEPeripheral?
     private var currentAlertView:UIAlertController?
@@ -301,8 +302,7 @@ extension MainViewController: CBCentralManagerDelegate {
         }
         
         //if status was connected, then disconnect was unexpected by the user, show alert
-        let topVC = navController.topViewController
-        if  connectionStatus == ConnectionStatus.Connected && isModuleController(topVC!) {
+        if  connectionStatus == ConnectionStatus.Connected {
             
             printLog(self, funcName: "centralManager:didDisconnectPeripheral", logString: "unexpected disconnect while connected")
             
@@ -367,11 +367,9 @@ extension MainViewController: CBCentralManagerDelegate {
     
     func dereferenceModeController() {
         
-        pinIoViewController = nil
         uartViewController = nil
         deviceInfoViewController = nil
         controllerViewController = nil
-        dfuViewController = nil
     }
     
 
