@@ -37,6 +37,7 @@
 		A9C61DED1B6AC782005C3D9B /* MqttSettingsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C61DEC1B6AC782005C3D9B /* MqttSettingsHeaderCell.swift */; };
 		A9C88E7A1B7E47ED00A3F330 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A9C88E791B7E47ED00A3F330 /* Settings.bundle */; };
 		D799733A6FE07F51B41A7F65 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F99478C57E5542A6C520337F /* Pods.framework */; };
+		DB74B2741C0CDAA30056205C /* DayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB74B2731C0CDAA30056205C /* DayTableViewController.swift */; };
 		DBD0F07F1BFED81E00A98E1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD0F07E1BFED81E00A98E1A /* Main.storyboard */; };
 		DBD0F0811BFED90D00A98E1A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0F0801BFED90D00A98E1A /* MainViewController.swift */; };
 		F007EDBA1A3064B60023FCD6 /* ControllerViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F007EDB91A3064B60023FCD6 /* ControllerViewController_iPad.xib */; };
@@ -247,6 +248,7 @@
 		A9C61DEC1B6AC782005C3D9B /* MqttSettingsHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MqttSettingsHeaderCell.swift; sourceTree = "<group>"; };
 		A9C88E791B7E47ED00A3F330 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		ADDE3DF62E9F32DA6CD326FB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DB74B2731C0CDAA30056205C /* DayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTableViewController.swift; sourceTree = "<group>"; };
 		DBD0F07E1BFED81E00A98E1A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "BLE Test/Main.storyboard"; sourceTree = "<group>"; };
 		DBD0F0801BFED90D00A98E1A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F007EDB91A3064B60023FCD6 /* ControllerViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ControllerViewController_iPad.xib; sourceTree = "<group>"; };
@@ -573,6 +575,7 @@
 				F05E7E0218BEF399005E25F6 /* Images.xcassets */,
 				DBD0F07E1BFED81E00A98E1A /* Main.storyboard */,
 				DBD0F0801BFED90D00A98E1A /* MainViewController.swift */,
+				DB74B2731C0CDAA30056205C /* DayTableViewController.swift */,
 				F0A2C96F16BBE44500F2FD12 /* Classes */,
 				F0C47BFD16C229CE002EFADA /* Images */,
 				F0CBE3521B28C308009E0128 /* BluetoothLE Test WatchKit Extension */,
@@ -1100,6 +1103,7 @@
 				F0CCCF9C1B0F266D0061558B /* DFUViewController.m in Sources */,
 				F0A1D4671A80B6A3009C3001 /* BLESensorButton.swift in Sources */,
 				A98580161B66F4C5000F93DA /* MqttSettingsViewController.swift in Sources */,
+				DB74B2741C0CDAA30056205C /* DayTableViewController.swift in Sources */,
 				F0DBB56A19F4625800CB91E1 /* DeviceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

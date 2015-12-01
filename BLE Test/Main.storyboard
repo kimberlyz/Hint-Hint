@@ -82,5 +82,96 @@
             </objects>
             <point key="canvasLocation" x="303" y="338"/>
         </scene>
+        <!--Date-->
+        <scene sceneID="aMn-nL-Ybq">
+            <objects>
+                <tableViewController id="btJ-WZ-qM3" customClass="DayTableViewController" customModule="Adafruit_Bluefruit_LE_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3qZ-bs-SDM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="z3L-x1-64q">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Rdi-AT-PoF">
+                                        <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rdi-AT-PoF" id="ZMf-hN-5wV">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Period" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Liu-5g-euU">
+                                                    <rect key="frame" x="8" y="11" width="92" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="Liu-5g-euU" firstAttribute="centerY" secondItem="ZMf-hN-5wV" secondAttribute="centerY" id="bR7-fe-aDf"/>
+                                                <constraint firstItem="Liu-5g-euU" firstAttribute="leading" secondItem="ZMf-hN-5wV" secondAttribute="leadingMargin" id="i2a-9H-Hi0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vzv-uy-OKj">
+                                        <rect key="frame" x="0.0" y="108" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vzv-uy-OKj" id="uHr-Nv-Sam">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Period" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggl-A3-70N">
+                                                    <rect key="frame" x="8" y="11" width="83" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="Ggl-A3-70N" firstAttribute="centerY" secondItem="uHr-Nv-Sam" secondAttribute="centerY" id="4Gq-iA-WxM"/>
+                                                <constraint firstItem="Ggl-A3-70N" firstAttribute="leading" secondItem="uHr-Nv-Sam" secondAttribute="leadingMargin" id="R20-e2-Whl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="btJ-WZ-qM3" id="Dxm-Wn-9N2"/>
+                            <outlet property="delegate" destination="btJ-WZ-qM3" id="moO-Ea-bjU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Date" id="hId-vl-U2N"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T1s-SL-HLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1838" y="227"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3SI-ab-LFj">
+            <objects>
+                <navigationController storyboardIdentifier="NavToDay" automaticallyAdjustsScrollViewInsets="NO" id="QJ2-JX-P5g" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qEm-PX-XJ1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="btJ-WZ-qM3" kind="relationship" relationship="rootViewController" id="UEi-ut-rnr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DQh-9r-Yfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026" y="227"/>
+        </scene>
     </scenes>
 </document>
