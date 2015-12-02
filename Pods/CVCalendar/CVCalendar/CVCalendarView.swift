@@ -210,7 +210,7 @@ extension CVCalendarView {
             let screenSize = UIScreen.mainScreen().bounds.size
             
             let allowed = selfSize.width <= screenSize.width && selfSize.height <= screenSize.height
-            
+
             if !validated && allowed {
                 let width = selfSize.width
                 let height: CGFloat
