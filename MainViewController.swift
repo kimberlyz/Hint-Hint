@@ -41,13 +41,7 @@ class MainViewController: UIViewController {
     
     @IBAction func connect(sender: AnyObject) {
         //let vc = BLEMainViewController.sharedInstance
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let navVC = storyboard.instantiateViewControllerWithIdentifier("NavToDay") as! UINavigationController
-        
-        let dayVC = navVC.viewControllers[0] as! DayTableViewController
-        dayVC.dayTitle = selectedDay.date.commonDescription
-        
-        self.presentViewController(navVC, animated: true, completion: nil)
+
         //vc.navigationItem.title = selectedDay.date.commonDescription
         //vc.didBecomeActive()
     }
@@ -80,6 +74,14 @@ extension MainViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate
     func didSelectDayView(dayView: CVCalendarDayView) {
         print("\(dayView.date.commonDescription) is selected!")
         selectedDay = dayView
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let navVC = storyboard.instantiateViewControllerWithIdentifier("NavToDay") as! UINavigationController
+        
+        let dayVC = navVC.viewControllers[0] as! DayTableViewController
+        dayVC.dayTitle = selectedDay.date.commonDescription
+        
+        self.presentViewController(navVC, animated: true, completion: nil)
     }
     
     func presentedDateUpdated(date: CVDate) {
@@ -119,7 +121,7 @@ extension MainViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate
             self.view.insertSubview(updatedMonthLabel, aboveSubview: self.monthLabel)
         }
     }
-    
+    /*
     func preliminaryView(viewOnDayView dayView: DayView) -> UIView {
         let circleView = CVAuxiliaryView(dayView: dayView, rect: dayView.bounds, shape: CVShape.Circle)
         circleView.fillColor = .colorFromCode(0xCCCCCC)
@@ -131,7 +133,7 @@ extension MainViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate
             return true
         }
         return false
-    }
+    } */
     
     func supplementaryView(viewOnDayView dayView: DayView) -> UIView {
         let π = M_PI

@@ -356,10 +356,6 @@ extension CVCalendarMonthContentViewController {
         let coordinator = calendarView.coordinator
         monthView.mapDayViews { dayView in
             if dayView.date.day == day && !dayView.isOut {
-                if let selected = coordinator.selectedDayView where selected != dayView {
-                    self.calendarView.didSelectDayView(dayView)
-                }
-
                 coordinator.performDayViewSingleSelection(dayView)
             }
         }
