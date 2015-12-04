@@ -11,6 +11,8 @@ import UIKit
 class DayTableViewController: UITableViewController {
     
     var dayTitle : String?
+    var startPeriodChecked = false
+    var endPeriodChecked = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,35 @@ class DayTableViewController: UITableViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let selectedCell = tableView.cellForRowAtIndexPath(indexPath)
+        
+
+        
+        if selectedCell?.reuseIdentifier == "StartPeriod" {
+            // if the End Period cell has not already been checked, the Start Period cell can be checked
+            if !endPeriodChecked {
+                startPeriodChecked = !startPeriodChecked
+                toggleCellSelection(selectedCell!)
+            }
+            
+        } else {
+            // if the Start Period cell has not already been checked, the End Period cell can be checked
+            if !startPeriodChecked {
+                endPeriodChecked = !endPeriodChecked
+                toggleCellSelection(selectedCell!)
+            }
+
+        }
+    }
+    
+    func toggleCellSelection(cell: UITableViewCell) {
+        if cell.accessoryType == .Checkmark {
+            cell.accessoryType = .None
+        } else {
+            cell.accessoryType = .Checkmark
+        }
+    }
 
     // MARK: - Table view data source
 /*
