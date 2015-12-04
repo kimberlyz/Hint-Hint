@@ -55,6 +55,13 @@
                                     <outlet property="calendarDelegate" destination="xYH-KY-uLr" id="7IK-rV-gEZ"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43a-50-3XA">
+                                <rect key="frame" x="232" y="43" width="136" height="21"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="todayMonthView:" destination="xYH-KY-uLr" eventType="touchUpInside" id="dyB-Xm-zUa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,14 +72,18 @@
                             <constraint firstItem="rY0-BB-g4l" firstAttribute="leading" secondItem="yDg-mn-7Vf" secondAttribute="leadingMargin" id="9Rv-Tb-qlc"/>
                             <constraint firstItem="eyg-Dn-8yR" firstAttribute="leading" secondItem="yDg-mn-7Vf" secondAttribute="leadingMargin" id="DDt-qM-k6F"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rY0-BB-g4l" secondAttribute="trailing" constant="-20" id="Lxc-ov-gZH"/>
+                            <constraint firstItem="43a-50-3XA" firstAttribute="trailing" secondItem="NZf-Qb-Eba" secondAttribute="trailing" id="UfP-yQ-6Wm"/>
                             <constraint firstItem="rY0-BB-g4l" firstAttribute="trailing" secondItem="eyg-Dn-8yR" secondAttribute="trailing" id="ZVz-yQ-JTX"/>
                             <constraint firstItem="NZf-Qb-Eba" firstAttribute="top" secondItem="bIE-Ix-HC5" secondAttribute="bottom" constant="23" id="adq-4o-zM1"/>
                             <constraint firstItem="eyg-Dn-8yR" firstAttribute="leading" secondItem="rY0-BB-g4l" secondAttribute="leading" id="i2N-yP-wXD"/>
                             <constraint firstItem="eyg-Dn-8yR" firstAttribute="top" secondItem="bIE-Ix-HC5" secondAttribute="bottom" constant="60" id="jZA-ko-Iov"/>
                             <constraint firstItem="rY0-BB-g4l" firstAttribute="top" secondItem="eyg-Dn-8yR" secondAttribute="bottom" constant="23" id="keO-78-boH"/>
                             <constraint firstItem="eyg-Dn-8yR" firstAttribute="top" secondItem="NZf-Qb-Eba" secondAttribute="bottom" constant="16" id="twS-79-paq"/>
+                            <constraint firstItem="43a-50-3XA" firstAttribute="leading" secondItem="NZf-Qb-Eba" secondAttribute="leading" id="vlN-9P-6aB"/>
+                            <constraint firstItem="43a-50-3XA" firstAttribute="top" secondItem="NZf-Qb-Eba" secondAttribute="top" id="w1g-Hi-d3i"/>
                             <constraint firstItem="7H9-7P-rcZ" firstAttribute="top" secondItem="cjL-Og-FyE" secondAttribute="bottom" constant="20" id="wJz-g2-Yb0"/>
                             <constraint firstItem="cjL-Og-FyE" firstAttribute="centerX" secondItem="yDg-mn-7Vf" secondAttribute="centerX" id="yUi-5Y-Fyv"/>
+                            <constraint firstItem="43a-50-3XA" firstAttribute="height" secondItem="NZf-Qb-Eba" secondAttribute="height" id="zO6-xD-nEL"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

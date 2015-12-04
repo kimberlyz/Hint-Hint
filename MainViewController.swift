@@ -45,6 +45,9 @@ class MainViewController: UIViewController {
         //vc.navigationItem.title = selectedDay.date.commonDescription
         //vc.didBecomeActive()
     }
+    @IBAction func todayMonthView(sender: AnyObject) {
+        self.calendarView.toggleCurrentDayView()
+    }
     
    }
 
