@@ -10,25 +10,30 @@ import UIKit
 
 class DayTableViewController: UITableViewController {
     
-    //var dayTitle : String?
+    var dayTitle : String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.navigationItem.title = dayTitle!
-
+        self.navigationItem.title = dayTitle!
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.navigationItem.title = "New title"
+        //self.navigationItem.title
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func done(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 
     // MARK: - Table view data source
 /*

@@ -22,7 +22,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         monthLabel.text = CVDate(date: NSDate()).globalDescription
         // Do any additional setup after loading the view.
     }
@@ -40,13 +40,16 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func connect(sender: AnyObject) {
-        //let vc = BLEMainViewController()
+        //let vc = BLEMainViewController.sharedInstance
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("NavToDay") as! UINavigationController
-
+        let navVC = storyboard.instantiateViewControllerWithIdentifier("NavToDay") as! UINavigationController
+        
+        let dayVC = navVC.viewControllers[0] as! DayTableViewController
+        dayVC.dayTitle = selectedDay.date.commonDescription
+        
+        self.presentViewController(navVC, animated: true, completion: nil)
         //vc.navigationItem.title = selectedDay.date.commonDescription
-        //let vc = DayTableViewController()
-        self.presentViewController(vc, animated: true, completion: nil)
+        //vc.didBecomeActive()
     }
     
    }
