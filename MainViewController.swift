@@ -15,6 +15,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var calendarView: CVCalendarView!
     @IBOutlet weak var monthLabel: UILabel!
     
+    let appDelegate = UIApplication.sharedApplication().delegate as! BLEAppDelegate
+    
     var shouldShowDaysOut = true
     var animationFinished = true
     
@@ -41,9 +43,9 @@ class MainViewController: UIViewController {
     
     @IBAction func connect(sender: AnyObject) {
         //let vc = BLEMainViewController.sharedInstance
-
-        //vc.navigationItem.title = selectedDay.date.commonDescription
-        //vc.didBecomeActive()
+        let vc = appDelegate.mainViewController
+        self.presentViewController(vc!, animated: true, completion: nil)
+        vc!.didBecomeActive()
     }
     @IBAction func todayMonthView(sender: AnyObject) {
         self.calendarView.toggleCurrentDayView()
@@ -82,7 +84,8 @@ extension MainViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate
         let navVC = storyboard.instantiateViewControllerWithIdentifier("NavToDay") as! UINavigationController
         
         let dayVC = navVC.viewControllers[0] as! DayTableViewController
-        dayVC.dayTitle = selectedDay.date.commonDescription
+        //dayVC.dayTitle = selectedDay.date.commonDescription
+        dayVC.selectedDay = self.selectedDay
         
         self.presentViewController(navVC, animated: true, completion: nil)
     }
@@ -176,11 +179,11 @@ extension MainViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate
     }
     
     func supplementaryView(shouldDisplayOnDayView dayView: DayView) -> Bool {
-        if (Int(arc4random_uniform(3)) == 1) {
+        if dayView.startPeriod {
             return true
+        } else {
+            return false
         }
-        
-        return false
     }
 }
 

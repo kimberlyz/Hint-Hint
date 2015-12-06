@@ -23,6 +23,9 @@ public final class CVCalendarDayView: UIView {
     public var isOut = false
     public var isCurrentDay = false
     
+    public var startPeriod = false
+    public var endPeriod = false
+    
     public weak var monthView: CVCalendarMonthView! {
         get {
             var monthView: MonthView!

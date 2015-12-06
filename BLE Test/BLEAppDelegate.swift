@@ -14,9 +14,8 @@ import WatchConnectivity
 class BLEAppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     
     var window:UIWindow?
-    //var mainViewController:BLEMainViewController?
-    var mainViewController:MainViewController?
-    var calendarViewController:MainViewController?
+    var mainViewController :BLEMainViewController?
+    //var mainViewController:MainViewController?
     
     
     required override init() {
@@ -28,26 +27,15 @@ class BLEAppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
+        // uncomment this part to start on calendarView screen and comment the following two lines to start on default screen
+        /*
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier("CalendarStoryboard")
-        self.window!.rootViewController = vc
-        //print(self.window!.rootViewController!)
-        //self.window!.rootViewController!.presentViewController(vc, animated: true, completion: nil)
+        self.window!.rootViewController = vc */
         
-        //mainViewController = CalendarViewController()
-        //self.window?.addSubview(mainViewController!.view)
+        self.mainViewController = BLEMainViewController.sharedInstance
+        window!.rootViewController = mainViewController
         
-        //self.window?.rootViewController?.presentViewController(mainViewController!, animated: false, completion: nil)
-        
-        //  Temporary iOS8 fix for 'presentation lag' on launch
-        //[self.window addSubview:viewController.view];
-        
-        //[self.window.rootViewController presentViewController:viewController animated:NO completion:nil];
-        
-        //self.mainViewController = BLEMainViewController.sharedInstance
-        //self.mainViewController = CalendarViewController()
-        
-        //window!.rootViewController = mainViewController
         window!.makeKeyAndVisible()
         
         
@@ -115,6 +103,7 @@ class BLEAppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     
     
     //WatchKit request
+    /*
     
     func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
         
@@ -250,7 +239,7 @@ class BLEAppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
                     reply([:])
                 }
             }
-    }
+    } */
     
 //
 //    - (void)applicationWillResignActive:(UIApplication*)application

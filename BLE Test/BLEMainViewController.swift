@@ -223,15 +223,15 @@ class BLEMainViewController : UIViewController, UINavigationControllerDelegate, 
         infoBarButton = UIBarButtonItem(customView: buttonCopy) */
         
         // add back bar button to mode controllers
-        let archivedData = NSKeyedArchiver.archivedDataWithRootObject(backButton)
+      /*  let archivedData = NSKeyedArchiver.archivedDataWithRootObject(backButton)
         let buttonCopy = NSKeyedUnarchiver.unarchiveObjectWithData(archivedData) as! UIButton
         buttonCopy.addTarget(self, action: Selector("back:"), forControlEvents: UIControlEvents.TouchUpInside)
-        backBarButton = UIBarButtonItem(customView: buttonCopy)
+        backBarButton = UIBarButtonItem(customView: buttonCopy) */
         
         deviceListViewController = DeviceListViewController(aDelegate: self)
         deviceListViewController.navigationItem.rightBarButtonItem = infoBarButton
         
-        deviceListViewController.navigationItem.leftBarButtonItem = backBarButton
+      //  deviceListViewController.navigationItem.leftBarButtonItem = backBarButton
         
         deviceListViewController.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Disconnect", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         //add scan indicator to toolbar

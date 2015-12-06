@@ -7,17 +7,19 @@
 //
 
 import UIKit
+import CVCalendar
 
 class DayTableViewController: UITableViewController {
     
     var dayTitle : String?
-    var startPeriodChecked = false
-    var endPeriodChecked = false
+    var startPeriodChecked : Bool?
+    var endPeriodChecked : Bool?
+    var selectedDay : DayView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = dayTitle!
+        self.navigationItem.title = selectedDay!.date.commonDescription
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -26,6 +28,15 @@ class DayTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         //self.navigationItem.title
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
+        startPeriodChecked = selectedDay!.startPeriod
+        endPeriodChecked = selectedDay!.endPeriod
+        
+        print(startPeriodChecked!)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -33,25 +44,27 @@ class DayTableViewController: UITableViewController {
     }
     
     @IBAction func done(sender: AnyObject) {
+        
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let selectedCell = tableView.cellForRowAtIndexPath(indexPath)
         
-
         
         if selectedCell?.reuseIdentifier == "StartPeriod" {
             // if the End Period cell has not already been checked, the Start Period cell can be checked
-            if !endPeriodChecked {
-                startPeriodChecked = !startPeriodChecked
+            if !endPeriodChecked! {
+                startPeriodChecked = !startPeriodChecked!
+                selectedDay!.startPeriod = startPeriodChecked!
                 toggleCellSelection(selectedCell!)
             }
             
         } else {
             // if the Start Period cell has not already been checked, the End Period cell can be checked
-            if !startPeriodChecked {
-                endPeriodChecked = !endPeriodChecked
+            if !startPeriodChecked! {
+                endPeriodChecked = !endPeriodChecked!
+                selectedDay!.endPeriod = endPeriodChecked!
                 toggleCellSelection(selectedCell!)
             }
 
@@ -80,12 +93,24 @@ class DayTableViewController: UITableViewController {
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }*/
+        //let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        var cell : UITableViewCell?
+        if indexPath.row == 0 {
+            cell = tableView.dequeueReusableCellWithIdentifier("StartPeriodIdentifier", forIndexPath: indexPath)
+            
+            if startPeriodChecked! {
+                toggleCellSelection(cell!)
+            }
+            
+        } else {
+            cell = tableView.dequeueReusableCellWithIdentifier("EndPeriodIdentifier", forIndexPath: indexPath)
+            
+            if endPeriodChecked! {
+                toggleCellSelection(cell!)
+            }
+        }
+        return cell!
+    } */
     
 
     /*
