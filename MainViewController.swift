@@ -134,6 +134,7 @@ extension MainViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate
     func preliminaryView(viewOnDayView dayView: DayView) -> UIView {
         let circleView = CVAuxiliaryView(dayView: dayView, rect: dayView.bounds, shape: CVShape.Circle)
         circleView.fillColor = .colorFromCode(0xCCCCCC)
+        //circleView.fillColor = .colorFromCode(0x009999)
         return circleView
     }
     
@@ -142,16 +143,6 @@ extension MainViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate
             return true
         }
         return false
-        /*if period1 < 8 {
-            period1 += 1
-            return true
-        } else {
-            return false
-        }/* */
-        if (dayView.startPeriod) {
-            return true
-        }
-        return false */
     } 
     
     func supplementaryView(viewOnDayView dayView: DayView) -> UIView {
@@ -192,30 +183,10 @@ extension MainViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate
     }
     
     func supplementaryView(shouldDisplayOnDayView dayView: DayView) -> Bool {
-        /*
-        if period1 < 8 {
-            period1 += 1
-            return true
-        } else {
-            return false
-        }*/
-        /*
-        if dayView.weekdayIndex == 1 {
+        if dayView.startPeriod {
             return true
         }
         return false
-        
-        if (Int(arc4random_uniform(3)) == 1) {
-            return true
-        } */
-        
-        return false
-        /*
-        if dayView.startPeriod {
-            return true
-        } else {
-            return false
-        } */
     }
 }
 

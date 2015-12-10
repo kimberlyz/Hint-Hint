@@ -197,12 +197,13 @@ extension CVCalendarDayView {
                 insertSubview(preView, atIndex: 0)
                 preView.layer.zPosition = CGFloat(-MAXFLOAT)
             }
-        }
+        } 
     }
     
     public func supplementarySetup() {
         if let delegate = calendarView.delegate, shouldShow = delegate.supplementaryView?(shouldDisplayOnDayView: self) where shouldShow {
             if let supView = delegate.supplementaryView?(viewOnDayView: self) {
+                supView.tag = 1
                 insertSubview(supView, atIndex: 0)
             }
         }

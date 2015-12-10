@@ -45,10 +45,20 @@ class DayTableViewController: UITableViewController {
     }
     
     @IBAction func done(sender: AnyObject) {
-        //rootViewController!.viewDidLoad()
-        //rootViewController!.viewDidLayoutSubviews()
-        //rootViewController!.preliminaryView(shouldDisplayOnDayView: startPeriod
-        //rootViewController?.calendarView.commitCalendarViewUpdate()
+
+        if let delegate = selectedDay!.calendarView.delegate, shouldShow = delegate.supplementaryView?(shouldDisplayOnDayView: selectedDay!) {
+            if shouldShow {
+                if let supView = delegate.supplementaryView?(viewOnDayView: selectedDay!) {
+                    supView.tag = 1
+                    selectedDay!.insertSubview(supView, atIndex: 0)
+                }
+            } else { // if the period is not selected, check if it has already been selected. If so, remove old selection view.
+                if let subview = selectedDay!.calendarView.viewWithTag(1) {
+                    subview.removeFromSuperview()
+                }
+            }
+        }
+        
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
