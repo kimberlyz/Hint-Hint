@@ -28,13 +28,14 @@ class BLEAppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         // uncomment this part to start on calendarView screen and comment the following two lines to start on default screen
-        /*
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier("CalendarStoryboard")
-        self.window!.rootViewController = vc */
+        self.window!.rootViewController = vc
         
+        /*
         self.mainViewController = BLEMainViewController.sharedInstance
-        window!.rootViewController = mainViewController
+        window!.rootViewController = mainViewController */
         
         window!.makeKeyAndVisible()
         

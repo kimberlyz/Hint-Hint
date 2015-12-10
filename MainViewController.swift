@@ -22,6 +22,8 @@ class MainViewController: UIViewController {
     
     var selectedDay:DayView!
     
+    var period1 = 2
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,9 +45,10 @@ class MainViewController: UIViewController {
     
     @IBAction func connect(sender: AnyObject) {
         //let vc = BLEMainViewController.sharedInstance
-        let vc = appDelegate.mainViewController
-        self.presentViewController(vc!, animated: true, completion: nil)
-        vc!.didBecomeActive()
+        //let vc = appDelegate.mainViewController
+        let vc = BLEMainViewController()
+        self.presentViewController(vc, animated: true, completion: nil)
+        vc.didBecomeActive()
     }
     @IBAction func todayMonthView(sender: AnyObject) {
         self.calendarView.toggleCurrentDayView()
@@ -84,7 +87,7 @@ extension MainViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate
         let navVC = storyboard.instantiateViewControllerWithIdentifier("NavToDay") as! UINavigationController
         
         let dayVC = navVC.viewControllers[0] as! DayTableViewController
-        //dayVC.dayTitle = selectedDay.date.commonDescription
+        dayVC.rootViewController = self
         dayVC.selectedDay = self.selectedDay
         
         self.presentViewController(navVC, animated: true, completion: nil)
@@ -127,7 +130,7 @@ extension MainViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate
             self.view.insertSubview(updatedMonthLabel, aboveSubview: self.monthLabel)
         }
     }
-    /*
+    
     func preliminaryView(viewOnDayView dayView: DayView) -> UIView {
         let circleView = CVAuxiliaryView(dayView: dayView, rect: dayView.bounds, shape: CVShape.Circle)
         circleView.fillColor = .colorFromCode(0xCCCCCC)
@@ -139,7 +142,17 @@ extension MainViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate
             return true
         }
         return false
-    } */
+        /*if period1 < 8 {
+            period1 += 1
+            return true
+        } else {
+            return false
+        }/* */
+        if (dayView.startPeriod) {
+            return true
+        }
+        return false */
+    } 
     
     func supplementaryView(viewOnDayView dayView: DayView) -> UIView {
         let π = M_PI
@@ -179,11 +192,30 @@ extension MainViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate
     }
     
     func supplementaryView(shouldDisplayOnDayView dayView: DayView) -> Bool {
+        /*
+        if period1 < 8 {
+            period1 += 1
+            return true
+        } else {
+            return false
+        }*/
+        /*
+        if dayView.weekdayIndex == 1 {
+            return true
+        }
+        return false
+        
+        if (Int(arc4random_uniform(3)) == 1) {
+            return true
+        } */
+        
+        return false
+        /*
         if dayView.startPeriod {
             return true
         } else {
             return false
-        }
+        } */
     }
 }
 

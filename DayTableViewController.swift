@@ -15,6 +15,7 @@ class DayTableViewController: UITableViewController {
     var startPeriodChecked : Bool?
     var endPeriodChecked : Bool?
     var selectedDay : DayView?
+    var rootViewController : MainViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +45,10 @@ class DayTableViewController: UITableViewController {
     }
     
     @IBAction func done(sender: AnyObject) {
-        
+        //rootViewController!.viewDidLoad()
+        //rootViewController!.viewDidLayoutSubviews()
+        //rootViewController!.preliminaryView(shouldDisplayOnDayView: startPeriod
+        //rootViewController?.calendarView.commitCalendarViewUpdate()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -76,6 +80,19 @@ class DayTableViewController: UITableViewController {
             cell.accessoryType = .None
         } else {
             cell.accessoryType = .Checkmark
+        }
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if let identifier = cell.reuseIdentifier {
+            switch identifier {
+                case "StartPeriod":
+                    cell.accessoryType = startPeriodChecked! ? .Checkmark : .None
+                case "EndPeriod":
+                    cell.accessoryType = endPeriodChecked! ? .Checkmark : .None
+                default:
+                    break
+            }
         }
     }
 
